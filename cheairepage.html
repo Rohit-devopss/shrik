@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cheair Repearing | Furnysoft</title>
+    <!-- Font Awesome CDN-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet" />
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="r.html" />
+    
+
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: "Poppins", sans-serif;
+        }
+
+        section {
+            height: 100vh;
+            width: 100%;
+            display: grid;
+            place-items: center;
+        }
+
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .column {
+            width: 100%;
+            padding: 0 1em 1em 1em;
+            text-align: center;
+        }
+
+        .card {
+            width: 100%;
+            height: 100%;
+            padding: 2em 1.5em;
+            background: linear-gradient(white, #2c7bfe 50%);
+            background-size: 100% 200%;
+            background-position: 0 2.5%;
+            border-radius: 5px;
+            box-shadow: 0 0 35px rgba(0, 0, 0, 0.12);
+            cursor: pointer;
+            transition: 0.5s;
+        }
+
+        h3 {
+            font-size: 20px;
+            font-weight: 600;
+            color: #1f194c;
+            margin: 1em 0;
+        }
+
+        p {
+            color: white;
+            font-size: 15px;
+            line-height: 1.6;
+            letter-spacing: 0.03em;
+        }
+
+        .icon-wrapper {
+            background-color: #2c7bfe;
+            position: relative;
+            margin: auto;
+            font-size: 30px;
+            height: 2.5em;
+            width: 2.5em;
+            color: #ffffff;
+            border-radius: 50%;
+            display: grid;
+            place-items: center;
+            transition: 0.5s;
+        }
+
+        .card:hover  {
+            background-position: 0 100%;
+        }
+
+        .card:hover .icon-wrapper {
+            background-color: #fcf5f5;
+            color: #1c6cec;
+        }
+        .card:hover p {
+            color: rgb(215, 33, 33);
+            /* background-color: white; */
+        }
+       
+
+        @media screen and (min-width: 480px) {
+            section {
+                padding: 0 2em;
+            }
+
+            .column {
+                flex: 0 50%;
+                max-width: 50%;
+            }
+        }
+
+        @media screen and (min-width: 480px) {
+            section {
+                padding: 1em 3em;
+            }
+
+            .column {
+                flex: 0 0 33.33%;
+                max-width: 33.33%;
+            }
+        }
+
+        .both_area {
+           
+            background-color:transparent;
+            height: 400px;
+            width: 300%;
+            margin-left: 20px;
+        }
+
+        .both_area .area1 {
+           
+            height: 400px;
+            width: 50%;
+            background-color:transparent;
+            float: left;
+
+        }
+
+        .both_area .area1 ul li {
+            background-color:transparent;
+            margin-left: 40px;
+            padding: 5px;
+            margin-top: 2px;
+        }
+
+        .both_area .area2 {
+            height: 400px;
+            width: 50%;
+            background-color: transparent;
+            float: left;
+
+        }
+
+        .both_area .area2 ul li {
+            color: black;
+            margin-left: 40px;
+            padding: 5px;
+            margin-top: 2px;
+        }
+
+        .areacall {
+            /* background-color: #fcfcfc; */
+            background: linear-gradient(white, #5897fc 50%);
+            background-repeat: no-repeat;
+            background-size: cover;
+            border-radius: 50px;
+            height: 400px;
+            width: 30%;
+            position: relative;
+            margin-top: 300px;
+            margin-left: 50px;
+        }
+
+        .areacall .req {
+            margin-left: 350px;
+            padding: 20px;
+            margin-top: -20px;
+            line-height: -20px;
+            margin-left: 0px;
+            padding-top: -15px;
+            border-radius: 5px;
+
+
+        }
+
+        .areacall .req h1 {
+            margin-left: 10px;
+        }
+
+        .areacall .req button{
+            padding: 5px;
+            width: 120px;
+            margin-left: 10px;
+            margin-top: -40px;
+            color: black;
+            /* font-weight: 200; */
+            font-family: Arial, Helvetica, sans-serif;
+            border-radius: 10px; 
+            border: transparent;
+            height: 40px;
+          
+        }
+        .areacall .req button a{
+            text-decoration: none;
+        }
+
+        .areacall .req ul {
+            padding: 20px;
+            line-height: 50px;
+            padding: 10px;
+            border: transparent;
+
+        }
+
+        .areacall .req ul li {
+            list-style: none;
+
+        }
+
+        .areacall .req ul li a input {
+            margin-right: 90px;
+            padding: 10
+        }
+        a {
+  text-decoration: none;
+  vertical-align: middle;
+  text-align: center;
+  line-height: 3;
+}
+
+p {
+  color: black;
+  margin: 0px;
+}
+
+.sidebar {
+  height: auto;
+  width: 0px;
+  position: fixed;
+  text-align: center;
+  top: 50vh;
+  padding: 10px;
+}
+
+p i {
+  left: 30px;
+  position: relative;
+  vertical-align: middle;
+  text-align: center;
+  font-size: 24px;
+}
+
+.social {
+  margin-left: -200px;
+  width: 230px;
+  padding: 0;
+  display: inline-table;
+  height: 5px;
+  background-color: rgba(128, 128, 128, 0.73);
+  -moz-transition-property: margin-left;
+  -moz-transition-duration: 0.2s;
+  -moz-transition-delay: 0.2s;
+  -ms-transition-property: margin-left;
+  -ms-transition-duration: 0.2s;
+  -ms-transition-delay: 0.2s;
+  -o-transition-property: margin-left;
+  -o-transition-duration: 0.2s;
+  -o-transition-delay: 0.2s;
+  -webkit-transition-property: margin-left;
+  -webkit-transition-duration: 0.2s;
+  -webkit-transition-delay: 0.2s;
+  box-shadow: 0px 0px 6px 0px #3E3D3D;
+  cursor: pointer;
+}
+
+.social:hover {
+  margin-left: -30px;
+  width: 230px;
+}
+
+.facebook {
+  background-color: #3b5998;
+}
+
+.twitter {
+  background-color: #4099FF;
+}
+
+.instagram {
+  background-color: #cf109c;
+}
+
+
+
+
+    </style>
+</head>
+
+<body>
+    <section>
+
+        
+        <div class="row" style="padding-top:3% ; padding-bottom:5%; margin-left: 45px;">
+            <h2 class="section-heading">
+                Cheair Repairing Services  </h2>
+        </div>
+        <div class="row">
+            <div class="column" style="margin-left: 220px;">
+                <div class="card">
+                    <div class="icon-wrapper">
+                        <i class="fas fa-hammer"></i>
+                    </div>
+                    <h3>On Site Repearing Service</h3>
+                    <p style="color: black">
+                        In order to ensure fast and efficient service we keep a stock of replacement parts required to
+                        repair most chairs at offices when we carry out necessary seating repairs.
+                    </p>
+                </div>
+            </div>
+            <div class="column">
+                <div class="card">
+                    <div class="icon-wrapper" >
+                        <i class="fas fa-brush"></i>
+                    </div>
+                    <h3>Audit & Contract Based Service</h3>
+                    <p style="color:black" >
+                        we also perform whole office or site audits through which we will be able to provide our
+                        customer a detailed breakdown of the items which require attention and also the cost that which
+                        is associated with the rectification if any issues are suspected.
+                    </p>
+                </div>
+            </div>
+
+            
+
+            <h2 style="padding-top: 50px; padding-botttom:50px;">We deals with the following issues of cheair...</h2>
+            <div class="both_area" style="padding-top:20px;">
+
+
+
+                <div class="area1 ">
+                    <ul>
+                        <li> Gas Cylinder Replacement</li>
+                        <li> Chair Arm Pad Replacement</li>
+                        <li> Wobbly Office Chair Repair</li>
+                        <li> Missing Chair Parts Replacement</li>
+                        <li> Chair Maintenance</li>
+                        <li> Chair Caster Replacement</li>
+                        <li> Chair Wheels Replacement</li>
+                        <li> Seat Cushion for Office Chair Replacement</li>
+                        <li> Chair Back Repair</li>
+                        <li> Gas Lift Piston Shock Office Replacement Chair Repair</li>
+                        <li> Chair Servicing</li>
+                    </ul>
+
+                </div>
+
+                <div class="area2">
+                    <ul>
+                        <li> Chair Tilt Feature</li>
+                        <li> Chair Back Repair</li>
+                        <li> Chair Seat Pan Repair</li>
+                        <li> Recliner chair repair & services</li>
+                        <li> Missing or Broken Chair Arm Repair</li>
+                        <li> Office Chair Bolt Replacement</li>
+                        <li> Broken Office Chair Lever</li>
+                        <li> Chair Shock Replacement</li>
+                        <li> Chair Seat Keeps Going Down Repair</li>
+                        <li> Wooden & Steel, Dining Table Chair Repair and
+                            Cushioning Services</li>
+                    </ul>
+
+
+                </div>
+            </div>
+
+
+    </section>
+    <div class="areacall">
+        <div class="req">
+
+            <h1> Request a Call Back</h1>
+            <ul>
+                <li><input type="text" name="name" placeholder="Name*" required style="padding: 10px; width: 320px; ">
+                </li>
+
+                <li><input type="email" name="email" placeholder="Email*"
+                        style="padding: 10px; width: 320px; margin-top: 10px;"></li>
+
+                <li><input type="number" name="number" placeholder="Mobile / Phone*"
+                        style="padding: 10px; width: 320px; min-width: 24; margin-top: 10px;"></li>
+
+                <li><input type="name" name="name" placeholder="Message*"
+                        style="padding: 10px; width: 320px;  height: 100px; margin-top: 10px;"></li>
+                <br>
+            </ul>
+             <button>
+                <a href="#">Submit</a>
+            </button>
+        </div> 
+
+    </div>
+
+
+
+
+    <div>
+               <a class="sf-icon-telephone e-btn e-link" href="tel:1800123456"> Call Us Now</a>
+            </div>
+
+</html>
